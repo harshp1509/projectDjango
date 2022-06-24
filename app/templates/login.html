@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+
+{%block content%}
+   <div class="container pt-4">
+    <div class="col-lg-4 mx-auto  p-0">
+        <div class="alert alert-success"><h2>Login<h2></div>
+        <div>
+          <div class="p-4 shadow">
+            <form action="/login/" method="POST">
+              {%csrf_token%} {{form.as_p}}
+              <hr />
+              <input type="submit" value="Login" class="btn btn-success" />
+            </form>
+          </div>
+        </div>
+      </div>
+   </div>{% endblock %}
+
+
